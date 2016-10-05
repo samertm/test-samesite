@@ -1,5 +1,7 @@
 # Service Worker samesite cookie bug
 
+Tested on Chrome 51.0.2704.84 (64-bit)
+
 Reproduces a bug where same site cookies are not attached to requests
 that are fetched by the service worker.
 
