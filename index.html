@@ -1,0 +1,18 @@
+<html>
+  <script>
+    navigator.serviceWorker.register('/sw.js');
+    // Wait for service worker to activate
+    setTimeout(function() {
+      console.log("Sending requests");
+
+      var h = new XMLHttpRequest();
+      h.open("GET", "/test-path", true);
+      h.send();
+
+      var hh = new XMLHttpRequest();
+      hh.open("GET", "/sw-test-path", true);
+      hh.send();
+
+    }, 1000);
+  </script>
+</html>
